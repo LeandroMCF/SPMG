@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Login</title>
+</head>
+<header>
+    <div class="container cabecalho">
+        <div class="voltar">
+            <a href="Index.html">Voltar</a>
+        </div>
+        <div class="title">
+            <a href="Index.html" class="link-title"><img class="imagem-header" src="images/Logo2.png"></a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <div class="alinhamentoADM">
+            <h1>Entrou como: ADM</h1>
+        </div>
+
+        <div class="ops">
+            <div class="alinharInput">
+                <input class="abrir" type='button' value="Marcar Consulta" onclick="MarcarConsulta();"/>
+            </div>
+            <div class="alinharCad">
+                <div id="MarcarConsu">
+                    <div class="alinhamentoADMFechar">
+                        <div class="alinharFechar">
+                            <h2 class="h2Fechar">Marcar Consulta</h2>
+                            <input class="fechar" type='image' src="./images/letra-x.png"  onclick="FecharMarcarConsulta();"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="alinharInput">
+                <input class="abrir" type='button' value='Cancelar Consulta' onclick="CancelarConsulta();"/>
+            </div>
+            <div class="alinharCad">
+                <div id="CancelarConsu">
+                    <div class="alinhamentoADMFechar">
+                        <div class="alinharFechar">
+                            <h2 class="h2Fechar">Cancelar Consulta</h2>
+                            <input class="fechar" type='image' src="./images/letra-x.png"  onclick="FecharCancelarConsulta();"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="alinharInput">
+                <input class="abrir" type='button' value='Cadastrar novo Email' onclick="CadastrarNovoEmail();"/>
+            </div>
+            <div class="alinharCad">
+                <div id="CadEmail">
+                    <div class="alinhamentoADMFechar">
+                        <div class="alinharFechar">
+                            <h2 class="h2Fechar">Cadastrar Email e Senha</h2>
+                            <input class="fechar" type='image' src="./images/letra-x.png"  onclick="FecharCadastrarNovoEmail();"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="alinharInput">
+                <input class="abrir" type='button' value='Cadastrar novo Médico' onclick="CadastrarNovoMédico();"/>
+            </div>
+            <div class="alinharCad">
+                <div id="CadMedico">
+                    <div class="alinhamentoADMFechar">
+                        <div class="alinharFechar">
+                            <h2 class="h2Fechar">Cadastrar Médico</h2>
+                            <input class="fechar" type='image' src="./images/letra-x.png"  onclick="FecharCadastrarNovoMédico();"/>
+                        </div>
+                    </div>
+                    <div class="container alinharForm">
+                        <form>
+                            <div class="alinharInputForm">
+                                <input type="text" placeholder="Nome" />
+                                <input type="text" placeholder="CRM"/>
+                                <p style="font-weight: bolder;">Email</p>
+                                <select>
+                                    <option value="1">Cleissu@gmail.com</option>
+                                    <option value="2">Robssu@gmail.com</option>
+                                    <option value="3">Robertu@gmail.com</option>
+                                </select>
+                                <p style="font-weight: bolder;">Clinica</p>
+                                <select>
+                                    <option value="1">Clinica1</option>
+                                    <option value="2">Clinica2</option>
+                                    <option value="3">Clinica3</option>
+                                </select>
+                                <p style="font-weight: bolder;">Especialidade</p>
+                                <select>
+                                    <option value="1">Especialidade1</option>
+                                    <option value="2">Especialidade2</option>
+                                    <option value="3">Especialidade3</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="alinharInput">
+                <input class="abrir" type='button' value='Cadastrar novo Prontuario' onclick="CadastrarNovoProntuario();"/>
+            </div>
+            <div class="alinharCad">
+                <div id="CadProntuario">
+                    <div class="alinhamentoADMFechar">
+                        <div class="alinharFechar">
+                            <h2 class="h2Fechar">Cadastrar novo Prontuario</h2>
+                            <input class="fechar" type='image' src="./images/letra-x.png"  onclick="FecharCadastrarNovoProntuario();"/>
+                        </div>
+                    </div>
+                    <div class="container alinharForm">
+                        <form>
+                            <div class="alinharInputForm">
+                                <input type="text" placeholder="Nome" />
+                                <input type="date" placeholder="Data de Nascimento"/>
+                                <input type="text" placeholder="Telefone (Exemplo: DDD 00000-0000)"/>
+                                <input type="text" placeholder="RG (Exemplo: 00000000-0)"/>
+                                <input type="text" placeholder="CPF (Exemplo: 00000000000)"/>
+                                <input type="text" placeholder="Endereço (Exemplo: Rua N°, Cidade, Estado, CEP)"/>
+                                <p style="font-weight: bolder;">Email</p>
+                                <select>
+                                    <option value="1">Cleissu@gmail.com</option>
+                                    <option value="2">Robssu@gmail.com</option>
+                                    <option value="3">Robertu@gmail.com</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="alinharInput">
+                <input class="abrir" type='button' value='Cadastrar novo ADM' onclick="CadastrarNovoADM();"/>
+            </div>
+            <div class="alinharCad">
+                <div id="CadAdm">
+                    <div class="alinhamentoADMFechar">
+                        <div class="alinharFechar">
+                            <h2 class="h2Fechar">Cadastrar novo ADM</h2>
+                            <input class="fechar" type='image' src="./images/letra-x.png"  onclick="FecharCadastrarNovoADM();"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function MarcarConsulta(){
+            document.getElementById("MarcarConsu").style.display = "block" 
+        }
+        function FecharMarcarConsulta(){
+            document.getElementById("MarcarConsu").style.display = "none" 
+        }
+
+
+
+
+        function CancelarConsulta(){
+            document.getElementById("CancelarConsu").style.display = "block" 
+        }
+        function FecharCancelarConsulta(){
+            document.getElementById("CancelarConsu").style.display = "none" 
+        }
+
+
+
+
+        function CadastrarNovoEmail(){
+            document.getElementById("CadEmail").style.display = "block" 
+        }
+        function FecharCadastrarNovoEmail(){
+            document.getElementById("CadEmail").style.display = "none" 
+        }
+
+
+
+
+        function CadastrarNovoMédico(){
+            document.getElementById("CadMedico").style.display = "block" 
+        }
+        function FecharCadastrarNovoMédico(){
+            document.getElementById("CadMedico").style.display = "none" 
+        }
+
+
+
+
+
+        function CadastrarNovoProntuario(){
+            document.getElementById("CadProntuario").style.display = "block" 
+        }
+        function FecharCadastrarNovoProntuario(){
+            document.getElementById("CadProntuario").style.display = "none" 
+        }
+
+
+
+
+        function CadastrarNovoADM(){
+            document.getElementById("CadAdm").style.display = "block" 
+        }  
+        function FecharCadastrarNovoADM(){
+            document.getElementById("CadAdm").style.display = "none" 
+        }  
+    </script>
+</body>

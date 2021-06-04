@@ -40,6 +40,7 @@ namespace SP_Medical_Group.Controllers
                 new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, usuario.IdUsuario.ToString()),
                 new Claim(ClaimTypes.Role, usuario.IdTipoUsuario.ToString()),
+                new Claim("role", usuario.IdTipoUsuario.ToString()),
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("SPMG-Authentication"));

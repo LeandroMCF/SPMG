@@ -371,20 +371,254 @@ footer{
 
 /* Login */
 
-
-
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
 
 .voltar{
     display: flex;
+    justify-content: start;
     align-items: center;
-    width: 70px;
-    height: 100%;
+    width: 643px;
 }
-.logoLogin{
+
+.voltar a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding-right: 600px;
+}
+.alinhemantoLogin{
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    width: 278px;
-    height: 100%;
+    margin-top: 90px;
+}
+.alinhemantoLogin h2{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 44px;
+}
+.campo{
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.alinharCampo{
+    width: 570px;
+    height: 383px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.alinharCampo p{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+.digitar{
+    width: 569px;
+    height: 28px;
+}
+.email{
+    margin-bottom: 64px;
+}
+.senha{
+    margin-bottom: 116px;
+}
+.alinharP{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.botaoLogin{
+    width: 395px;
+    height: 64px;
+    font-size: 36px;
+    color: white;
+    background-color: var(--azul);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+}
+
+
+
+
+
+.alinharTextoMedico{
+    width: 100%;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.alinharTabela{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tabMedico{
+    overflow: auto; 
+    width: 1170px; 
+    max-height: 500px; 
+    min-height: 150px;
+    border:solid 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.tabela{
+    width:1000px;
+    margin-right: 100px;
+}
+.tabela th{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 10px;
+}
+.tabela td{
+    font-size: 29px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+
+#MarcarConsu{
+    width: 1170px;
+    height: 683px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CancelarConsu{
+    width: 1170px;
+    height: 683px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadEmail{
+    width: 1170px;
+    height: 683px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadMedico{
+    width: 1170px;
+    height: 683px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadProntuario{
+    width: 1170px;
+    height: 800px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadAdm{
+    width: 1170px;
+    height: 683px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+.alinhamentoADM{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ops{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.abrir{
+    width: 850px;
+    height: 79px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 19px;
+    background-color: var(--azul);
+}
+.alinharInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.alinharCad{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.fechar{
+    width: 51px;
+    height: 51px;
+}
+.alinhamentoADMFechar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alinharFechar{
+    margin-top: 60px;
+    width: 970px;
+    display: flex;
+    justify-content: space-between;
+}
+.h2Fechar{
+    color: #000000;
+    padding-left: 350px;
+}
+.alinharForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.alinharInputForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.alinharInputForm select{
+    width: 800px;
+    height: 40px;
+    margin-bottom: 30px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+.alinharInputForm input{
+    width: 800px;
+    height: 40px;
+    border: solid 1px;
+    margin-bottom: 30px;
+    border-radius: 5px;
 }
