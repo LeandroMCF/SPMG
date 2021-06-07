@@ -23,7 +23,6 @@ namespace SP_Medical_Group.Controllers
             _clinica = new ClinicaRepository();
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Clinica novaClinica)
         {
@@ -32,7 +31,6 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(202);
         }
 
-        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
@@ -41,7 +39,6 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(204);
         }
 
-        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Listar()
         {

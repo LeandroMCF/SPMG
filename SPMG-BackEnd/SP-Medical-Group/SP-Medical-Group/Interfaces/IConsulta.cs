@@ -11,6 +11,8 @@ namespace SP_Medical_Group.Interfaces
         void Agendar(Consulta novaConsulta);
         void CancelarConsulta(int id);
         List<Consulta> ListarConsulta();
-        List<Consulta> ListarConsultaId(int id);
+        List<Consulta> ListarConsultaIdMedicos(int id);
+
+        List<Consulta> ListarConsultaIdProntuarios(int id);
     }
 }

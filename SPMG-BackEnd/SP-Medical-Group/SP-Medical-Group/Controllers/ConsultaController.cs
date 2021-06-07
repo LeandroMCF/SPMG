@@ -22,22 +22,25 @@ namespace SP_Medical_Group.Controllers
         {
             _consulta = new ConsultaRepository();
         }
-
-        [Authorize(Roles = "2, 3")]
-        [HttpGet("{id}")]
-        public IActionResult Buscar(int id)
+        
+        [HttpGet("medicos/{id}")]
+        public IActionResult BuscarM(int id)
         {
-            return Ok(_consulta.ListarConsultaId(id));
+            return Ok(_consulta.ListarConsultaIdMedicos(id));
         }
 
-        [Authorize(Roles = "1")]
+        [HttpGet("prontuarios/{id}")]
+        public IActionResult BuscarP(int id)
+        {
+            return Ok(_consulta.ListarConsultaIdProntuarios(id));
+        }
+
         [HttpGet]
-        public IActionResult Listtar()
+        public IActionResult Listar()
         {
             return Ok(_consulta.ListarConsulta());
         }
 
-        [Authorize(Roles = "2")]
         [HttpPost]
         public IActionResult Agendar(Consulta novaConsulta)
         {
@@ -46,7 +49,6 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(202);
         }
 
-        [Authorize(Roles = "2")]
         [HttpDelete("{id}")]
         public IActionResult Cancelar(int id)
         {

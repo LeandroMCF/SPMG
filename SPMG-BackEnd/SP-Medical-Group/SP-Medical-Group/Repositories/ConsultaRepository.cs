@@ -34,6 +34,7 @@ namespace SP_Medical_Group.Repositories
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
                 .Include(c => c.IdMedicosNavigation)
+                .Include(c => c.IdSituacaoNavigation)
                 .Select(c =>
                 new Consulta
                 {
@@ -60,10 +61,11 @@ namespace SP_Medical_Group.Repositories
                 .ToList();
         }
 
-        public List<Consulta> ListarConsultaId(int id)
+        public List<Consulta> ListarConsultaIdMedicos(int id)
         {
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
+                .Include(c => c.IdSituacaoNavigation)
                 .Include(c => c.IdMedicosNavigation)
                 .Select(c =>
                 new Consulta
@@ -88,7 +90,40 @@ namespace SP_Medical_Group.Repositories
                         Cpf = c.IdProntuarioNavigation.Cpf,
                     }
                 })
-                .Where(c => c.IdMedicos == id || c.IdProntuario == id)
+                .Where(c => c.IdMedicos == id)
+                .ToList();
+        }
+
+        public List<Consulta> ListarConsultaIdProntuarios(int id)
+        {
+            return ctx.Consultas
+                .Include(c => c.IdProntuarioNavigation)
+                .Include(c => c.IdSituacaoNavigation)
+                .Include(c => c.IdMedicosNavigation)
+                .Select(c =>
+                new Consulta
+                {
+                    IdConsultas = c.IdConsultas,
+                    IdMedicos = c.IdMedicos,
+                    IdProntuario = c.IdProntuario,
+                    IdSituacao = c.IdSituacao,
+
+                    IdSituacaoNavigation = new Situacao
+                    {
+                        Situacao1 = c.IdSituacaoNavigation.Situacao1,
+                    },
+                    IdMedicosNavigation = new Medico
+                    {
+                        Nome = c.IdMedicosNavigation.Nome,
+                        Crm = c.IdMedicosNavigation.Crm,
+                    },
+                    IdProntuarioNavigation = new Prontuario
+                    {
+                        Nome = c.IdProntuarioNavigation.Nome,
+                        Cpf = c.IdProntuarioNavigation.Cpf,
+                    }
+                })
+                .Where(c => c.IdMedicos == id)
                 .ToList();
         }
     }

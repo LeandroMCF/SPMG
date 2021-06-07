@@ -23,14 +23,12 @@ namespace SP_Medical_Group.Controllers
             _medico = new MedicoRepository();
         }
 
-        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Listar()
         {
             return Ok(_medico.ListarMedico());
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Medico novoMedico)
         {
@@ -40,7 +38,6 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(202);
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost("Buscar")]
         public IActionResult Buscar(Medico medico)
         {

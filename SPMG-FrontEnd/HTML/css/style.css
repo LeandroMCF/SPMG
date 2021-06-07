@@ -513,7 +513,7 @@ footer{
 }
 #CadEmail{
     width: 1170px;
-    height: 683px;
+    height: 500px;
     border: solid 2px;
     margin-bottom: 80px;
     display: none;
@@ -553,6 +553,7 @@ footer{
     justify-content: center;
 }
 .abrir{
+    color: white;
     width: 850px;
     height: 79px;
     font-family: 'Montserrat', sans-serif;

@@ -30,7 +30,6 @@ namespace SP_Medical_Group.Controllers
             return Ok(_prontuario.ListarProntuario());
         }
 
-        [Authorize(Roles = "1, 2")]
         [HttpPost]
         public IActionResult BuscarCPF(Prontuario prontuario)
         {
