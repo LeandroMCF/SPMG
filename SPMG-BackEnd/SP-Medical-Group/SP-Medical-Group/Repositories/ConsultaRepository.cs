@@ -63,34 +63,13 @@ namespace SP_Medical_Group.Repositories
 
         public List<Consulta> ListarConsultaIdMedicos(int id)
         {
+            Medico medico = ctx.Medicos
+                .FirstOrDefault(m => m.IdUsuario == id);
+
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
-                .Include(c => c.IdSituacaoNavigation)
                 .Include(c => c.IdMedicosNavigation)
-                .Select(c =>
-                new Consulta
-                {
-                    IdConsultas = c.IdConsultas,
-                    IdMedicos = c.IdMedicos,
-                    IdProntuario = c.IdProntuario,
-                    IdSituacao = c.IdSituacao,
-
-                    IdSituacaoNavigation = new Situacao
-                    {
-                        Situacao1 = c.IdSituacaoNavigation.Situacao1,
-                    },
-                    IdMedicosNavigation = new Medico
-                    {
-                        Nome = c.IdMedicosNavigation.Nome,
-                        Crm = c.IdMedicosNavigation.Crm,
-                    },
-                    IdProntuarioNavigation = new Prontuario
-                    {
-                        Nome = c.IdProntuarioNavigation.Nome,
-                        Cpf = c.IdProntuarioNavigation.Cpf,
-                    }
-                })
-                .Where(c => c.IdMedicos == id)
+                .Where(c => c.IdMedicosNavigation.IdUsuario == medico.IdUsuario)
                 .ToList();
         }
 
@@ -99,31 +78,7 @@ namespace SP_Medical_Group.Repositories
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
                 .Include(c => c.IdSituacaoNavigation)
-                .Include(c => c.IdMedicosNavigation)
-                .Select(c =>
-                new Consulta
-                {
-                    IdConsultas = c.IdConsultas,
-                    IdMedicos = c.IdMedicos,
-                    IdProntuario = c.IdProntuario,
-                    IdSituacao = c.IdSituacao,
-
-                    IdSituacaoNavigation = new Situacao
-                    {
-                        Situacao1 = c.IdSituacaoNavigation.Situacao1,
-                    },
-                    IdMedicosNavigation = new Medico
-                    {
-                        Nome = c.IdMedicosNavigation.Nome,
-                        Crm = c.IdMedicosNavigation.Crm,
-                    },
-                    IdProntuarioNavigation = new Prontuario
-                    {
-                        Nome = c.IdProntuarioNavigation.Nome,
-                        Cpf = c.IdProntuarioNavigation.Cpf,
-                    }
-                })
-                .Where(c => c.IdMedicos == id)
+                .Where(c => c.IdProntuario == id)
                 .ToList();
         }
     }

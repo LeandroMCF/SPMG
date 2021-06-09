@@ -13,5 +13,6 @@ namespace SP_Medical_Group.Interfaces
         List<Usuario> Listar();
         Usuario BuscarPorId(int Id);
         void Deletar(int Id);
+        List<Usuario> BuscarPorTipoId(int Id);
     }
 }

@@ -39,7 +39,7 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(204);
         }
 
-        [HttpGet]
+        [HttpGet("Listar")]
         public IActionResult Listar()
         {
             return Ok(_clinica.ListarClinica());

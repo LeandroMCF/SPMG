@@ -23,7 +23,6 @@ namespace SP_Medical_Group.Controllers
             _usuario = new UsuarioRepository();
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Usuario novoUsuario)
         {
@@ -32,14 +31,12 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(202);
         }
 
-        [Authorize(Roles = "1, 2")]
         [HttpGet]
         public IActionResult Listar()
         {
             return Ok(_usuario.Listar());
         }
 
-        [Authorize(Roles = "1")]
         [HttpDelete("{Id}")]
         public IActionResult Deletar(int Id)
         {
@@ -48,11 +45,16 @@ namespace SP_Medical_Group.Controllers
             return StatusCode(204);
         }
 
-        [Authorize(Roles = "1, 2")]
         [HttpGet("{Id}")]
         public IActionResult BuscarId(int Id)
         {
             return Ok(_usuario.BuscarPorId(Id));
+        }
+
+        [HttpGet("tipo/{Id}")]
+        public IActionResult BuscarTipoId(int Id)
+        {
+            return Ok(_usuario.BuscarPorTipoId(Id));
         }
     }
 }

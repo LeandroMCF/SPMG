@@ -17,10 +17,12 @@ namespace SP_Medical_Group.Controllers
     public class ConsultaController : ControllerBase
     {
         private IConsulta _consulta { get; set; }
+        private IMedico _medico { get; set; }
 
         public ConsultaController()
         {
             _consulta = new ConsultaRepository();
+            _medico = new MedicoRepository();
         }
         
         [HttpGet("medicos/{id}")]
@@ -41,7 +43,7 @@ namespace SP_Medical_Group.Controllers
             return Ok(_consulta.ListarConsulta());
         }
 
-        [HttpPost]
+        [HttpPost("cadastrar")]
         public IActionResult Agendar(Consulta novaConsulta)
         {
             _consulta.Agendar(novaConsulta);

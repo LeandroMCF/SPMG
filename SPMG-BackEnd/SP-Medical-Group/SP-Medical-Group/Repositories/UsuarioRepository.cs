@@ -19,6 +19,11 @@ namespace SP_Medical_Group.Repositories
             return ctx.Usuarios.FirstOrDefault(u => u.IdUsuario == Id);
         }
 
+        public List<Usuario> BuscarPorTipoId(int Id)
+        {
+            return ctx.Usuarios.Where(u => u.IdTipoUsuario == Id).ToList();
+        }
+
         public void cadastrar(Usuario novoUsuario)
         {
             ctx.Usuarios.Add(novoUsuario);

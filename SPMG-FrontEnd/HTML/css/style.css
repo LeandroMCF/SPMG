@@ -504,30 +504,23 @@ footer{
     margin-bottom: 80px;
     display: none;
 }
-#CancelarConsu{
-    width: 1170px;
-    height: 683px;
-    border: solid 2px;
-    margin-bottom: 80px;
-    display: none;
-}
 #CadEmail{
     width: 1170px;
-    height: 500px;
+    height: 550px;
     border: solid 2px;
     margin-bottom: 80px;
     display: none;
 }
 #CadMedico{
     width: 1170px;
-    height: 683px;
+    height: 750px;
     border: solid 2px;
     margin-bottom: 80px;
     display: none;
 }
 #CadProntuario{
     width: 1170px;
-    height: 800px;
+    height: 850px;
     border: solid 2px;
     margin-bottom: 80px;
     display: none;
@@ -622,4 +615,18 @@ footer{
     border: solid 1px;
     margin-bottom: 30px;
     border-radius: 5px;
+}
+.alinhasBotão{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.alinhasBotão button{
+    background-color: var(--azul);
+    color: white;
+    border: solid #000000 1px;
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
 }
