@@ -69,7 +69,7 @@ namespace SP_Medical_Group.Repositories
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
                 .Include(c => c.IdMedicosNavigation)
-                .Where(c => c.IdMedicosNavigation.IdUsuario == medico.IdUsuario)
+                .Where(c => c.IdMedicos == medico.IdMedicos)
                 .ToList();
         }
 

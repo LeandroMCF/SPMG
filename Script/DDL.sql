@@ -6,6 +6,8 @@ SELECT TipoUsuario.TipoUsuario FROM Usuario
 INNER JOIN TipoUsuario
 ON Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario;
 
+SELECT * FROM Usuario
+
 SELECT * FROM Clinica;
 
 SELECT * FROM Prontuario;
@@ -61,3 +63,16 @@ SELECT dbo.Idade('Ligia')AS [Nome]
 
 SELECT * FROM Prontuario
 Where CPF = '94839859000';
+
+DELETE FROM Consultas
+WHERE IdConsultas = 8
+DELETE FROM Consultas
+WHERE IdConsultas = 9
+DELETE FROM Consultas
+WHERE IdConsultas = 10
+DELETE FROM Consultas
+WHERE IdConsultas = 11
+DELETE FROM Consultas
+WHERE IdConsultas = 12
+DELETE FROM Consultas
+WHERE IdConsultas = 13
