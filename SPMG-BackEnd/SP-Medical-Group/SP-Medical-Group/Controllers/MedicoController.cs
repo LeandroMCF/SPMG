@@ -26,22 +26,48 @@ namespace SP_Medical_Group.Controllers
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(_medico.ListarMedico());
+            try
+            {
+                return Ok(_medico.ListarMedico());
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpPost]
         public IActionResult Cadastrar(Medico novoMedico)
         {
-            _medico.Cadastrar(novoMedico);
+            try
+            {
+                _medico.Cadastrar(novoMedico);
 
+                return StatusCode(202);
 
-            return StatusCode(202);
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpPost("Buscar")]
         public IActionResult Buscar(Medico medico)
         {
-            return Ok(_medico.BuscarPorCRM(medico.Crm));
+            try
+            {
+                return Ok(_medico.BuscarPorCRM(medico.Crm));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
     }
 }

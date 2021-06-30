@@ -12,7 +12,7 @@ namespace SP_Medical_Group.Interfaces
         void CancelarConsulta(int id);
         List<Consulta> ListarConsulta();
         List<Consulta> ListarConsultaIdMedicos(int id);
-
+        List<Consulta> ListarConsultaIdProntuariosConcluidas(int id);
         List<Consulta> ListarConsultaIdProntuarios(int id);
     }
 }

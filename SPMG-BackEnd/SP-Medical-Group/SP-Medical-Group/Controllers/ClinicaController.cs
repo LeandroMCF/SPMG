@@ -23,26 +23,56 @@ namespace SP_Medical_Group.Controllers
             _clinica = new ClinicaRepository();
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Clinica novaClinica)
         {
-            _clinica.AdicionarClinica(novaClinica);
+            try
+            {
+                _clinica.AdicionarClinica(novaClinica);
 
-            return StatusCode(202);
+                return StatusCode(202);
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
-            _clinica.RemoverClinica(id);
+            try
+            {
+                _clinica.RemoverClinica(id);
 
-            return StatusCode(204);
+                return StatusCode(204);
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
+        //[Authorize(Roles = "1")]
         [HttpGet("Listar")]
         public IActionResult Listar()
         {
-            return Ok(_clinica.ListarClinica());
+            try
+            {
+                return Ok(_clinica.ListarClinica());
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
     }
 }

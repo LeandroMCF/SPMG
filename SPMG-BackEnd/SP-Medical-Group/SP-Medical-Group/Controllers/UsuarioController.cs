@@ -26,35 +26,80 @@ namespace SP_Medical_Group.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Usuario novoUsuario)
         {
-            _usuario.cadastrar(novoUsuario);
+            try
+            {
+                _usuario.cadastrar(novoUsuario);
 
-            return StatusCode(202);
+                return StatusCode(202);
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
+            
         }
 
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(_usuario.Listar());
+            try
+            {
+                return Ok(_usuario.Listar());
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpDelete("{Id}")]
         public IActionResult Deletar(int Id)
         {
-            _usuario.Deletar(Id);
+            try
+            {
+                _usuario.Deletar(Id);
 
-            return StatusCode(204);
+                return StatusCode(204);
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpGet("{Id}")]
         public IActionResult BuscarId(int Id)
         {
-            return Ok(_usuario.BuscarPorId(Id));
+            try
+            {
+                return Ok(_usuario.BuscarPorId(Id));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpGet("tipo/{Id}")]
         public IActionResult BuscarTipoId(int Id)
         {
-            return Ok(_usuario.BuscarPorTipoId(Id));
+            try
+            {
+                return Ok(_usuario.BuscarPorTipoId(Id));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
     }
 }

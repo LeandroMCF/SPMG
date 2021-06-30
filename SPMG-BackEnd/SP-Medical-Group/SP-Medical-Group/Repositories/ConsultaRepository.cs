@@ -68,6 +68,7 @@ namespace SP_Medical_Group.Repositories
 
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
+                .Include(c => c.IdSituacaoNavigation)
                 .Include(c => c.IdMedicosNavigation)
                 .Where(c => c.IdMedicos == medico.IdMedicos)
                 .ToList();
@@ -75,10 +76,27 @@ namespace SP_Medical_Group.Repositories
 
         public List<Consulta> ListarConsultaIdProntuarios(int id)
         {
+            Prontuario prontuario = ctx.Prontuarios
+                .FirstOrDefault(p => p.IdUsuario == id);
+
             return ctx.Consultas
                 .Include(c => c.IdProntuarioNavigation)
                 .Include(c => c.IdSituacaoNavigation)
-                .Where(c => c.IdProntuario == id)
+                .Include(c => c.IdMedicosNavigation)
+                .Where(c => c.IdProntuario == prontuario.IdProntuario)
+                .ToList();
+        }
+
+        public List<Consulta> ListarConsultaIdProntuariosConcluidas(int id)
+        {
+            Prontuario prontuario = ctx.Prontuarios
+                .FirstOrDefault(p => p.IdUsuario == id);
+
+            return ctx.Consultas
+                .Include(c => c.IdProntuarioNavigation)
+                .Include(c => c.IdSituacaoNavigation)
+                .Include(c => c.IdMedicosNavigation)
+                .Where(c => c.IdProntuario == prontuario.IdProntuario && c.IdSituacao == 3)
                 .ToList();
         }
     }

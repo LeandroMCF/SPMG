@@ -28,13 +28,48 @@ namespace SP_Medical_Group.Controllers
         [HttpGet("medicos/{id}")]
         public IActionResult BuscarM(int id)
         {
-            return Ok(_consulta.ListarConsultaIdMedicos(id));
+            try
+            {
+                return Ok(_consulta.ListarConsultaIdMedicos(id));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpGet("prontuarios/{id}")]
         public IActionResult BuscarP(int id)
         {
-            return Ok(_consulta.ListarConsultaIdProntuarios(id));
+            try
+            {
+                return Ok(_consulta.ListarConsultaIdProntuarios(id));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
+
+        }
+
+        [HttpGet("prontuarios/Concluidas/{id}")]
+        public IActionResult BuscarPC(int id)
+        {
+            try
+            {
+                return Ok(_consulta.ListarConsultaIdProntuariosConcluidas(id));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
+
         }
 
         [HttpGet]
@@ -43,20 +78,40 @@ namespace SP_Medical_Group.Controllers
             return Ok(_consulta.ListarConsulta());
         }
 
+        
         [HttpPost("cadastrar")]
         public IActionResult Agendar(Consulta novaConsulta)
         {
-            _consulta.Agendar(novaConsulta);
+            try
+            {
+                _consulta.Agendar(novaConsulta);
 
-            return StatusCode(202);
+                return StatusCode(202);
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpDelete("{id}")]
         public IActionResult Cancelar(int id)
         {
-            _consulta.CancelarConsulta(id);
+            try
+            {
+                _consulta.CancelarConsulta(id);
 
-            return StatusCode(204);
+                return StatusCode(204);
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
     }
 }

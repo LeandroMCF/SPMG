@@ -10,7 +10,7 @@ namespace SP_Medical_Group.Interfaces
     {
         void CadastrarProntuario(Prontuario novoProntuario);
         List<Prontuario> ListarProntuario();
-        Prontuario BuscarPorCpf(string cpf);
+        Prontuario BuscarPorId(int id);
         void ExcluirProtuario(int id);
     }
 }

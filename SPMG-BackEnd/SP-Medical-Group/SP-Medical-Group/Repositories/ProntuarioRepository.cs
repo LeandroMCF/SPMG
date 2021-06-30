@@ -13,32 +13,9 @@ namespace SP_Medical_Group.Repositories
     {
         SPMGContext ctx = new SPMGContext();
 
-        public Prontuario BuscarPorCpf(string cpf)
+        public Prontuario BuscarPorId(int id)
         {
-            return ctx.Prontuarios
-                .Include(p => p.IdUsuarioNavigation)
-                .Select(p => new Prontuario
-                {
-                    IdProntuario = p.IdProntuario,
-                    Nome = p.Nome,
-                    DataDeNascimento = p.DataDeNascimento,
-                    Cpf = p.Cpf,
-                    Rg = p.Rg,
-                    Telefone = p.Telefone,
-                    Endereco = p.Endereco,
-
-                    IdUsuarioNavigation = new Usuario
-                    {
-                        Email = p.IdUsuarioNavigation.Email,
-                        IdTipoUsuario = p.IdUsuarioNavigation.IdTipoUsuario,
-
-                        IdTipoUsuarioNavigation = new TipoUsuario
-                        {
-                            TipoUsuario1 = p.IdUsuarioNavigation.IdTipoUsuarioNavigation.TipoUsuario1,
-                        }
-                    }
-                })
-                .FirstOrDefault(p => p.Cpf == cpf);
+            return ctx.Prontuarios.FirstOrDefault(p => p.IdUsuario == id);
         }
 
         public void CadastrarProntuario(Prontuario novoProntuario)

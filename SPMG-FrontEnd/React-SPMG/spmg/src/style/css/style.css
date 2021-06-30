@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+:root{
+    --fundo: #2EFFCD;
+    --cabecalho: #2EE6E2;
+    --azul: #35ABFA;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--azul);
+}
+li{
+    list-style-type: none;
+}
+.container{
+    width: 81%;
+    height: 108px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/*cabeçalho*/
+
+header{
+    width: 100%;
+    height: 108px;
+    background-color: var(--azul);
+}
+header h2{
+    margin-top: 104px;
+}
+.cabecalho{
+    display: flex;
+}
+header a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+.title{
+    display: flex;
+    width: auto;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.imagem-header{
+    margin-top: 5px;
+    width: 137px;
+    height: 40px;
+}
+.menu{
+    width: 770px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    width: 170px;
+    height: 100%;
+}
+header li:hover{
+    transition: 0.5s;
+    background-color: #2B63E3;
+    /* -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    border-radius:10%; */
+}
+
+/*banner*/
+
+.banner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 721px;
+    background-image: url("../images/fundo1.png");
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+}
+.alinhamento{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.banner-conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1169px;
+    height: 405px;
+}
+.banner-conteudo p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+.banner-conteudo img{
+    display: flex;
+    width: 600px;
+    height: 321.13px;
+    transition: padding 2s;
+}
+.banner img:hover{
+    box-shadow:
+            24px 24px #1F77B1;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    transition: 0.5s;
+}
+.texto-banner{
+    width: 469px;
+    height: 100%;
+    margin-right: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.img-banner{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* enderecos */
+
+.enderecos{
+    width: 100%;
+    height: 629px;
+    display: flex;
+}
+.enderecos-conteudo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 1170px;
+    height: 477px;
+    flex-direction: column;
+}
+.enderecos-conteudo h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 104px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--azul);
+}
+.blocos{
+    width: 1170px;
+    height: 329px;
+    margin-top: 104px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.bloco-endereco{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 37px;
+    width: 268px;
+    height: 329px;
+}
+.bloco-endereco:hover{
+    box-shadow:
+            12px 12px rgb(83, 83, 83);
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    transition: 0.5s;
+}
+.ajustar-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.txt-endereco{
+    width: 100%;
+    height: 136px;
+    display: flex;
+    justify-content: center;
+}
+.bloco-endereco img{
+    display: flex;
+    padding-top: 28px;
+    width: 139.12px;
+    height: 139px;
+}
+.bloco-endereco p{
+    display: flex;
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+}
+hr{
+    border: 1px solid #000000;
+    margin-bottom: 52px;
+}
+
+/* sobre nos */
+
+.sobre-nos{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 1081px;
+    background-color: var(--fundo);
+    background-image: url(../images/fundo.png);
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+}
+#sobre-conteudo{
+    width: 1161px;
+    height: 875px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+#sobre-conteudo h2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    margin-top: 104px;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 67px;
+    color: var(--azul);
+}
+#sobre-conteudo img{
+    width: 571px;
+    height: 417px;
+}
+#sobre-conteudo p{
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'Roboto', sans-serif;
+}
+.sobre-p{
+    width: 673px;
+    height: 417px;
+}
+.sobre-img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* rodape */ 
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 108px;
+    background-color: var(--azul);
+}
+.footer{
+    width: 1170px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer p{
+    font-size: 18px;
+    line-height: 15px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.footer img{
+    width: 126px;
+    height: 67.44px;
+}
+.contatos{
+    display: flex;
+    flex-direction: column;
+}
+.p1{
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+.p2{
+    padding-left: 15px;
+}
+.p3{
+    padding-left: 17px;
+    margin-top: 10px;
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+    width: 157px;
+    height: 79;
+}
+.redes img{
+    width: 50px;
+    height: 50px;
+    padding-left: 2px;
+}
+.redes p{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 15px;
+    text-align: center;
+    color: black;
+}
+.insta{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* Login */
+
+
+.imgFundo{
+    width: 100%;
+    height: 937.4px;
+    background-color: #E7F6FE;
+    background-image: url("../images/fundoLogin.png");
+    background-size: 100% 916px;
+    background-repeat: no-repeat;
+}
+.alinhemantoLogin{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+.alinhemantoLogin h2{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 36px;
+    line-height: 44px;
+}
+.campo{
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.alinharCampo{
+    width: 570px;
+    height: 383px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.alinharCampo p{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+.digitar{
+    width: 569px;
+    height: 28px;
+}
+.email{
+    margin-bottom: 64px;
+}
+.senha{
+    margin-bottom: 116px;
+}
+.alinharP{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.botaoLogin{
+    width: 395px;
+    height: 64px;
+    font-size: 36px;
+    color: white;
+    background-color: var(--azul);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+}
+
+
+
+
+
+.alinharTextoMedico{
+    width: 100%;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.alinharTabela{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tabMedico{
+    overflow: auto; 
+    width: 1170px; 
+    max-height: 500px; 
+    min-height: 150px;
+    border:solid 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    background-color: #185B88;
+}
+.tabela{
+    width:1000px;
+    margin-right: 100px;
+    background-color: #185B88;
+}
+.tabela th{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 10px;
+}
+.tabela td{
+    font-size: 29px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+
+#MarcarConsu{
+    width: 1170px;
+    height: 650px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadEmail{
+    width: 1170px;
+    height: 550px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadMedico{
+    width: 1170px;
+    height: 750px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadProntuario{
+    width: 1170px;
+    height: 850px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+#CadAdm{
+    width: 1170px;
+    height: 683px;
+    border: solid 2px;
+    margin-bottom: 80px;
+    display: none;
+}
+.alinhamentoADM{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ops{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.abrir{
+    color: white;
+    width: 850px;
+    height: 79px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 19px;
+    background-color: var(--azul);
+}
+.alinharInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.alinharCad{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.fechar{
+    width: 51px;
+    height: 51px;
+}
+.alinhamentoADMFechar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alinharFechar{
+    margin-top: 60px;
+    width: 970px;
+    display: flex;
+    justify-content: space-between;
+}
+.h2Fechar{
+    color: #000000;
+    padding-left: 350px;
+}
+.alinharForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.alinharInputForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.alinharInputForm select{
+    width: 800px;
+    height: 40px;
+    margin-bottom: 30px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+.alinharInputForm input{
+    width: 800px;
+    height: 40px;
+    border: solid 1px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.alinhasBotão{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.alinhasBotão button{
+    background-color: var(--azul);
+    color: white;
+    border: solid #000000 1px;
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
+}

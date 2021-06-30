@@ -23,34 +23,68 @@ namespace SP_Medical_Group.Controllers
             _prontuario = new ProntuarioRepository();
         }
 
-        
+
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(_prontuario.ListarProntuario());
+            try
+            {
+                return Ok(_prontuario.ListarProntuario());
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
-        [HttpPost]
-        public IActionResult BuscarCPF(Prontuario prontuario)
+        [HttpGet("buscarId/{id}")]
+        public IActionResult BuscarId(int id)
         {
-            return Ok(_prontuario.BuscarPorCpf(prontuario.Cpf));
+            try
+            {
+                return Ok(_prontuario.BuscarPorId(id));
+
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
-        
         [HttpPost("Cadastrar")]
         public IActionResult Cadastrar(Prontuario novoProntuario)
         {
-            _prontuario.CadastrarProntuario(novoProntuario);
+            try
+            {
+                _prontuario.CadastrarProntuario(novoProntuario);
 
-            return StatusCode(202);
+                return StatusCode(202);
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
 
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
-            _prontuario.ExcluirProtuario(id);
+            try
+            {
 
-            return StatusCode(204);
+                _prontuario.ExcluirProtuario(id);
+
+                return StatusCode(204);
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
         }
     }
 }
